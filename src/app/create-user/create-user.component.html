@@ -1,0 +1,28 @@
+<form [formGroup]="formLogin">
+  <h1>Crear cuenta</h1>
+  <div>
+    Nombre: <input type="name" name="" id="" formControlName="name" placeholder="Nombre">
+  </div><br>
+  <div>
+    Apellido: <input type="text" name="" id="" formControlName="text" placeholder="Apellido">
+  </div><br>
+  <div>
+    Email: <input type="email" name="" formControlName="email" placeholder="email@empresa.com">
+    <span *ngIf="formLogin.get('email')?.invalid && formLogin.get('email')?.touched"> Debe ser de tipo Email</span>
+  </div>
+  <br>
+  <div>
+    Password: <input type="password" name="" id="" formControlName="password" placeholder="Password">
+  </div>
+  <br>
+  <div>
+    Confirmar Password: <input type="password" name="" id="" formControlName="password" placeholder="Confirmar Password">
+  </div>
+  <br>
+  <div>
+    Profesión: <input type="message" name="" id="" formControlName="message" placeholder="Profesión">
+  </div><br>
+  <button class="center-button" class="btn btn-green"  type="submit"  [disabled]="formLogin.invalid">Crear tu cuenta de registro</button>
+</form>
+<br>
+{{formLogin.value | json}}

@@ -3,14 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CabeceraComponent } from './cabecera/cabecera.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CabeceraComponent,
+    FooterComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
