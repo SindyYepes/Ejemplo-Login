@@ -1,0 +1,6 @@
+<form action="" [formGroup]="login">
+  Usuario: <input type="email" name="name" [formControl]="name" /> <br> <br>
+  Contraseña: <input type="password" name="password" [formControl]="password"/>
+</form>
+<hr>
+<button (click)="irAInicio()">Iniciar Sesión</button>

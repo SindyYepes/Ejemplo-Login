@@ -13,7 +13,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
     AppComponent,
     CabeceraComponent,
     FooterComponent,
-    CreateUserComponent
+    CreateUserComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Prueba2';
+  customer! : any[];
+  cols: any;
+
+  @Input() fieldGroupBy: string = 'representative.name';
+
+  constructor(private readonly router:Router) {}
+  irAInicio(): void {
+    this.router.navigate(['inicio'])
+  }
 }

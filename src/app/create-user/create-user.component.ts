@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-create-user',
@@ -18,4 +18,9 @@ formLogin = new FormGroup({
 send(): any {
 console.log(this.formLogin.value);
   }
+  get name(): AbstractControl {return this.formLogin.get('name') as FormControl}
+  get text(): FormControl {return this.formLogin.get('text') as FormControl}
+  get email(): FormControl {return this.formLogin.get('email') as FormControl}
+  get password(): FormControl {return this.formLogin.get('password') as FormControl}
+  get message(): FormControl {return this.formLogin.get('message') as FormControl}
 }
